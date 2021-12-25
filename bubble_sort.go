@@ -22,7 +22,7 @@ func bubbleSort(a []int, len int) {
 				swapped = true
 			}
 		}
-		if !swapped { // if array is ordered, exit this method .
+		if !swapped { // [optimizing] if array is ordered, exit this method .
 			break
 		}
 	}
