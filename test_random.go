@@ -11,7 +11,7 @@ func RandomTest() {
 	fmt.Printf("|%46s%36s|\n", "Random Test", " ")
 	fmt.Printf("+%s+\n\n\n", strings.Repeat("=", 82))
 	for _, v := range length {
-		runAscending(v)
+		runRandom(v)
 	}
 }
 func runRandom(len int) {
