@@ -16,7 +16,7 @@ func test() {
 	rand.Seed(seed.Int64())
 
 	var verify []int
-	iter := rand.Intn(300000)
+	iter := rand.Intn(5000000)
 	fmt.Printf("[array length : %d]\n", iter)
 
 	fmt.Println("make arrays...")
@@ -29,6 +29,7 @@ func test() {
 	shell := make([]int, len(verify))
 	bmerge := make([]int, len(verify))
 	tmerge := make([]int, len(verify))
+	pmerge := make([]int, len(verify))
 	heap := make([]int, len(verify))
 
 	fmt.Println("copy arrays...")
@@ -38,6 +39,7 @@ func test() {
 	copy(shell, verify)
 	copy(bmerge, verify)
 	copy(tmerge, verify)
+	copy(pmerge, verify)
 	copy(heap, verify)
 
 	fmt.Println("runing default sort...")
@@ -49,7 +51,8 @@ func test() {
 	t4 := CallShellSort(shell, "shell sort")
 	t5 := CallBottomUpMergeSort(bmerge, "bottom-up merge sort")
 	t6 := CallTopDownMergeSort(tmerge, "top-down merge sort")
-	t7 := CallHeapSort(heap, "heap sort")
+	t7 := CallParallelMergeSort(pmerge, "parallel merge sort")
+	t8 := CallHeapSort(heap, "heap sort")
 
 	var pf string = ""
 	var s1 bool
@@ -83,8 +86,12 @@ func test() {
 	pf += fmt.Sprintf("| %25s | %15d ns | %15d ms | %10t |%s\n", "top-down merge sort", t6, t6/int64(time.Millisecond), s1, ef)
 	pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 82))
 
+	s1, ef = Equal(verify, pmerge)
+	pf += fmt.Sprintf("| %25s | %15d ns | %15d ms | %10t |%s\n", "parallel merge sort", t7, t7/int64(time.Millisecond), s1, ef)
+	pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 82))
+
 	s1, ef = Equal(verify, heap)
-	pf += fmt.Sprintf("| %25s | %15d ns | %15d ms | %10t |%s\n", "heap sort", t7, t7/int64(time.Millisecond), s1, ef)
+	pf += fmt.Sprintf("| %25s | %15d ns | %15d ms | %10t |%s\n", "heap sort", t8, t8/int64(time.Millisecond), s1, ef)
 	pf += fmt.Sprintf("+%s+\n\n\n", strings.Repeat("-", 82))
 
 	fmt.Print(pf)

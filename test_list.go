@@ -48,7 +48,15 @@ func CallBottomUpMergeSort(a []int, callName string) int64 {
 func CallTopDownMergeSort(a []int, callName string) int64 {
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	ShellSort(a)
+	TopDownMergeSort(a)
+	end := time.Since(start)
+	return end.Nanoseconds()
+}
+
+func CallParallelMergeSort(a []int, callName string) int64 {
+	fmt.Printf("runing %s...\n", callName)
+	start := time.Now()
+	ParallelMergeSort(a)
 	end := time.Since(start)
 	return end.Nanoseconds()
 }
