@@ -5,58 +5,90 @@ import (
 	"time"
 )
 
-func CallBubbleSort(a []int, callName string) int64 {
+func CallBubbleSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	BubbleSort(a)
+	BubbleSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
 
-func CallInsertionSort(a []int, callName string) int64 {
+func CallInsertionSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	InsertionSort(a)
+	InsertionSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
 
-func CallSelectionSort(a []int, callName string) int64 {
+func CallSelectionSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	SelectionSort(a)
+	SelectionSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
 
-func CallShellSort(a []int, callName string) int64 {
+func CallShellSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	ShellSort(a)
+	ShellSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
 
-func CallBottomUpMergeSort(a []int, callName string) int64 {
+func CallBottomUpMergeSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	BottomUpMergeSort(a)
+	BottomUpMergeSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
 
-func CallTopDownMergeSort(a []int, callName string) int64 {
+func CallTopDownMergeSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	ShellSort(a)
+	TopDownMergeSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
 
-func CallHeapSort(a []int, callName string) int64 {
+func CallParallelMergeSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
 	fmt.Printf("runing %s...\n", callName)
 	start := time.Now()
-	HeapSort(a)
+	ParallelMergeSort(test)
 	end := time.Since(start)
-	return end.Nanoseconds()
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
+}
+
+func CallHeapSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
+	fmt.Printf("runing %s...\n", callName)
+	start := time.Now()
+	HeapSort(test)
+	end := time.Since(start)
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
 }
