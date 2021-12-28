@@ -15,6 +15,9 @@ func run(origin, verify []int) {
 	t6, eq6, err6 := CallTopDownMergeSort(origin, verify, "top-down merge sort")
 	t7, eq7, err7 := CallParallelMergeSort(origin, verify, "parallel merge sort")
 	t8, eq8, err8 := CallHeapSort(origin, verify, "heap sort")
+	t9, eq9, err9 := CallLPQuickSort(origin, verify, "left-pivot quick sort")
+	t10, eq10, err10 := CallQuickSort(origin, verify, "middle-pivot quick sort")
+	t11, eq11, err11 := CallRPQuickSort(origin, verify, "right-pivot quick sort")
 
 	var pf string = ""
 
@@ -44,6 +47,15 @@ func run(origin, verify []int) {
 	pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 87))
 
 	pf += fmt.Sprintf("| %25s | %20d ns | %15d ms | %10t |%s\n", "heap sort", t8, t8/int64(time.Millisecond), eq8, err8)
+	pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 87))
+
+	pf += fmt.Sprintf("| %25s | %20d ns | %15d ms | %10t |%s\n", "left-pivot quick sort", t9, t9/int64(time.Millisecond), eq9, err9)
+	pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 87))
+
+	pf += fmt.Sprintf("| %25s | %20d ns | %15d ms | %10t |%s\n", "middle-pivot quick sort", t10, t10/int64(time.Millisecond), eq10, err10)
+	pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 87))
+
+	pf += fmt.Sprintf("| %25s | %20d ns | %15d ms | %10t |%s\n", "right-pivot quick sort", t11, t11/int64(time.Millisecond), eq11, err11)
 	pf += fmt.Sprintf("+%s+\n\n\n", strings.Repeat("-", 87))
 
 	fmt.Print(pf)

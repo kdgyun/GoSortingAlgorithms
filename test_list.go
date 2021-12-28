@@ -92,3 +92,36 @@ func CallHeapSort(origin []int, verify []int, callName string) (int64, bool, str
 	eq, err := Equal(verify, test)
 	return end.Nanoseconds(), eq, err
 }
+
+func CallLPQuickSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
+	fmt.Printf("runing %s...\n", callName)
+	start := time.Now()
+	QuickSortLP(test)
+	end := time.Since(start)
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
+}
+
+func CallQuickSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
+	fmt.Printf("runing %s...\n", callName)
+	start := time.Now()
+	QuickSort(test)
+	end := time.Since(start)
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
+}
+
+func CallRPQuickSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
+	fmt.Printf("runing %s...\n", callName)
+	start := time.Now()
+	QuickSortRP(test)
+	end := time.Since(start)
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
+}
