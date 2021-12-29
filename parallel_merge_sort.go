@@ -1,17 +1,16 @@
-package main
-
-import (
-	"runtime"
-	"sync"
-)
-
 /*
   author : kdgyun
 
   link : https://st-lab.tistory.com
   link : https://github.com/kdgyun
 */
-const threshold int = 2048
+
+package main
+
+import (
+	"runtime"
+	"sync"
+)
 
 func ParallelMergeSort(a []int) {
 	runtime.GOMAXPROCS(runtime.NumCPU())
@@ -25,7 +24,8 @@ func parallelMergeSort(a, temp []int, left int, right int) {
 		return
 	}
 
-	if right-left > threshold { // parallel
+	// 2048 is threshold
+	if right-left > 2048 { // parallel
 
 		mid := (left + right) >> 1
 

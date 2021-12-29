@@ -125,3 +125,14 @@ func CallRPQuickSort(origin []int, verify []int, callName string) (int64, bool, 
 	eq, err := Equal(verify, test)
 	return end.Nanoseconds(), eq, err
 }
+
+func CallParallelLPQuickSort(origin []int, verify []int, callName string) (int64, bool, string) {
+	test := make([]int, len(origin))
+	copy(test, origin)
+	fmt.Printf("runing %s...\n", callName)
+	start := time.Now()
+	ParallelQuickSortLP(test)
+	end := time.Since(start)
+	eq, err := Equal(verify, test)
+	return end.Nanoseconds(), eq, err
+}
