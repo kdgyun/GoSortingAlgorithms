@@ -31,7 +31,8 @@ func run(origin, verify []int) {
 	q = append(q, CallQuickSort(origin, verify, "middle-pivot quick sort"))
 	q = append(q, CallRPQuickSort(origin, verify, "right-pivot quick sort"))
 	q = append(q, CallParallelLPQuickSort(origin, verify, "parallel left-pivot quick sort"))
-
+	q = append(q, CallParallelLPQuickSort(origin, verify, "parallel middle-pivot quick sort"))
+	q = append(q, CallParallelLPQuickSort(origin, verify, "parallel right-pivot quick sort"))
 	var pf string = ""
 
 	pf += fmt.Sprintf("\n+%s+\n", strings.Repeat("-", 97))

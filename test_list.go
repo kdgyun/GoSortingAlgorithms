@@ -19,20 +19,6 @@ func CallBubbleSort(origin []int, verify []int, callName string) OutputForm {
 	return OutputForm{false, callName, -1, false, ""}
 }
 
-// func CallBubbleSort(origin []int, verify []int, callName string) OutputForm {
-// 	if BUBBLE_SORT {
-// 		test := make([]int, len(origin))
-// 		copy(test, origin)
-// 		fmt.Printf("runing %s...\n", callName)
-// 		start := time.Now()
-// 		BubbleSort(test)
-// 		end := time.Since(start)
-// 		eq, err := Equal(verify, test)
-// 		return end.Nanoseconds(), eq, err
-// 	}
-// 	return -1, false, ""
-// }
-
 func CallInsertionSort(origin []int, verify []int, callName string) OutputForm {
 	if INSERTION_SORT {
 		test := make([]int, len(origin))
@@ -180,6 +166,34 @@ func CallParallelLPQuickSort(origin []int, verify []int, callName string) Output
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
 		ParallelQuickSortLP(test)
+		end := time.Since(start)
+		eq, err := Equal(verify, test)
+		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
+	}
+	return OutputForm{false, callName, -1, false, ""}
+}
+
+func CallParallelMPQuickSort(origin []int, verify []int, callName string) OutputForm {
+	if PARALLEL_MIDDLE_PIVOT_QUICK_SORT {
+		test := make([]int, len(origin))
+		copy(test, origin)
+		fmt.Printf("runing %s...\n", callName)
+		start := time.Now()
+		ParallelQuickSort(test)
+		end := time.Since(start)
+		eq, err := Equal(verify, test)
+		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
+	}
+	return OutputForm{false, callName, -1, false, ""}
+}
+
+func CallParallelRPQuickSort(origin []int, verify []int, callName string) OutputForm {
+	if PARALLEL_RIGHT_PIVOT_QUICK_SORT {
+		test := make([]int, len(origin))
+		copy(test, origin)
+		fmt.Printf("runing %s...\n", callName)
+		start := time.Now()
+		ParallelQuickSortRP(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
