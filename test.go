@@ -18,6 +18,7 @@ const (
 	PARALLEL_MIDDLE_PIVOT_QUICK_SORT Activate = true
 	PARALLEL_RIGHT_PIVOT_QUICK_SORT  Activate = true
 	BINARY_INSERTION_SORT            Activate = true
+	TIM_SORT                         Activate = true
 )
 
 var length = [...]int{10, 100, 10000, 100000, 1000000}

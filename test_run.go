@@ -33,6 +33,7 @@ func run(origin, verify []int) {
 	q = append(q, CallParallelMPQuickSort(origin, verify, "parallel middle-pivot quick sort"))
 	q = append(q, CallParallelRPQuickSort(origin, verify, "parallel right-pivot quick sort"))
 	q = append(q, CallBinaryInsertionSort(origin, verify, "binary insertion sort"))
+	q = append(q, CallTimSort(origin, verify, "tim sort"))
 	var pf string = ""
 
 	pf += fmt.Sprintf("\n+%s+\n", strings.Repeat("-", 97))

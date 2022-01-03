@@ -214,3 +214,17 @@ func CallBinaryInsertionSort(origin []int, verify []int, callName string) Output
 	}
 	return OutputForm{false, callName, -1, false, ""}
 }
+
+func CallTimSort(origin []int, verify []int, callName string) OutputForm {
+	if TIM_SORT {
+		test := make([]int, len(origin))
+		copy(test, origin)
+		fmt.Printf("runing %s...\n", callName)
+		start := time.Now()
+		Timsort(test)
+		end := time.Since(start)
+		eq, err := Equal(verify, test)
+		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
+	}
+	return OutputForm{false, callName, -1, false, ""}
+}
