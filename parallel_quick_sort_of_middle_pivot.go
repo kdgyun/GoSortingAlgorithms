@@ -39,7 +39,7 @@ func parallelQuickSort(a []int, lo, hi int) {
 		parallelQuickSort(a, pivot+1, hi)
 		wg.Wait()
 	} else {
-		defaultQuickSort(a, lo, hi)
+		basicQuickSort(a, lo, hi)
 	}
 }
 
@@ -64,12 +64,12 @@ func parallelPartition(a []int, left, right int) int {
 	return hi
 }
 
-func defaultQuickSort(a []int, lo, hi int) {
+func basicQuickSort(a []int, lo, hi int) {
 
 	if lo >= hi {
 		return
 	}
 	pivot := parallelPartition(a, lo, hi)
-	defaultQuickSort(a, lo, pivot)
-	defaultQuickSort(a, pivot+1, hi)
+	basicQuickSort(a, lo, pivot)
+	basicQuickSort(a, pivot+1, hi)
 }

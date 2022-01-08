@@ -41,11 +41,11 @@ func parallelMergeSort(a, temp []int, left int, right int) {
 		wg.Wait()
 		mergeForPal(a, temp, left, mid, right)
 	} else {
-		defaultMergeSort(a, temp, left, right)
+		basicMergeSort(a, temp, left, right)
 	}
 }
 
-func defaultMergeSort(a, temp []int, left int, right int) {
+func basicMergeSort(a, temp []int, left int, right int) {
 
 	if right-left < 2 {
 		return
