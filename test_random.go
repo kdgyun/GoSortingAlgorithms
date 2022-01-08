@@ -1,3 +1,10 @@
+/*
+  author : kdgyun
+
+  link : https://st-lab.tistory.com
+  link : https://github.com/kdgyun
+*/
+
 package main
 
 import (

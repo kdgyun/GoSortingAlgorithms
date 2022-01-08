@@ -1,3 +1,10 @@
+/*
+  author : kdgyun
+
+  link : https://st-lab.tistory.com
+  link : https://github.com/kdgyun
+*/
+
 // This Quick sort is implemented with right element selected as the pivot
 
 package main

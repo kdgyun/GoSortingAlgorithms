@@ -1,11 +1,11 @@
-package main
-
 /*
   author : kdgyun
 
   link : https://st-lab.tistory.com
   link : https://github.com/kdgyun
 */
+
+package main
 
 func TopDownMergeSort(a []int) {
 	temp := make([]int, len(a))

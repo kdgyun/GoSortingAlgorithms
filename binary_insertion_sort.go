@@ -1,3 +1,10 @@
+/*
+  author : kdgyun
+
+  link : https://st-lab.tistory.com
+  link : https://github.com/kdgyun
+*/
+
 package main
 
 func getAscending(a []int, lo, hi int) int {
