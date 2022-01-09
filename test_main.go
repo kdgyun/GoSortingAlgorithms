@@ -27,6 +27,8 @@ const (
 	PARALLEL_RIGHT_PIVOT_QUICK_SORT  Activate = true
 	BINARY_INSERTION_SORT            Activate = true
 	TIM_SORT                         Activate = true
+	BITONIC_SORT                     Activate = true
+	PARALLEL_BITONIC_SORT            Activate = true
 )
 
 var lengths = [...]int{10, 100, 10000, 100000, 1000000} // lengths for test
