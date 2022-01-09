@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func TopDownMergeSort(a []int) {
 	temp := make([]int, len(a))

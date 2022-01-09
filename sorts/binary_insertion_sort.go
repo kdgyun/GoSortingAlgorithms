@@ -4,8 +4,7 @@
   link : https://st-lab.tistory.com
   link : https://github.com/kdgyun
 */
-
-package main
+package sorts
 
 func getAscending(a []int, lo, hi int) int {
 	limit := lo + 1

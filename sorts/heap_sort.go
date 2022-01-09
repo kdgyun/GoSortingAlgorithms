@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func HeapSort(a []int) {
 	heapSort(a, len(a))

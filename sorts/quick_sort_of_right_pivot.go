@@ -7,7 +7,7 @@
 
 // This Quick sort is implemented with right element selected as the pivot
 
-package main
+package sorts
 
 func QuickSortRP(a []int) {
 	quickSortLP(a, 0, len(a)-1)

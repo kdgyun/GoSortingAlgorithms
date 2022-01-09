@@ -10,6 +10,8 @@ package main
 import (
 	"fmt"
 	"time"
+
+	"GoSortingAlgorithms/sorts"
 )
 
 func CallBubbleSort(origin []int, verify []int, callName string) OutputForm {
@@ -18,7 +20,7 @@ func CallBubbleSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		BubbleSort(test)
+		sorts.BubbleSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -32,7 +34,7 @@ func CallCocktailSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		CocktailSort(test)
+		sorts.CocktailSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -46,7 +48,7 @@ func CallInsertionSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		InsertionSort(test)
+		sorts.InsertionSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -60,7 +62,7 @@ func CallSelectionSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		SelectionSort(test)
+		sorts.SelectionSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -74,7 +76,7 @@ func CallShellSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		ShellSort(test)
+		sorts.ShellSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -88,7 +90,7 @@ func CallBottomUpMergeSort(origin []int, verify []int, callName string) OutputFo
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		BottomUpMergeSort(test)
+		sorts.BottomUpMergeSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -102,7 +104,7 @@ func CallTopDownMergeSort(origin []int, verify []int, callName string) OutputFor
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		TopDownMergeSort(test)
+		sorts.TopDownMergeSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -116,7 +118,7 @@ func CallParallelMergeSort(origin []int, verify []int, callName string) OutputFo
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		ParallelMergeSort(test)
+		sorts.ParallelMergeSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -130,7 +132,7 @@ func CallHeapSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		HeapSort(test)
+		sorts.HeapSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -144,7 +146,7 @@ func CallLPQuickSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		QuickSortLP(test)
+		sorts.QuickSortLP(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -158,7 +160,7 @@ func CallQuickSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		QuickSort(test)
+		sorts.QuickSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -172,7 +174,7 @@ func CallRPQuickSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		QuickSortRP(test)
+		sorts.QuickSortRP(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -186,7 +188,7 @@ func CallParallelLPQuickSort(origin []int, verify []int, callName string) Output
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		ParallelQuickSortLP(test)
+		sorts.ParallelQuickSortLP(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -200,7 +202,7 @@ func CallParallelMPQuickSort(origin []int, verify []int, callName string) Output
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		ParallelQuickSort(test)
+		sorts.ParallelQuickSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -214,7 +216,7 @@ func CallParallelRPQuickSort(origin []int, verify []int, callName string) Output
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		ParallelQuickSortRP(test)
+		sorts.ParallelQuickSortRP(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -228,7 +230,7 @@ func CallBinaryInsertionSort(origin []int, verify []int, callName string) Output
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		BinarySort(test)
+		sorts.BinarySort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -242,7 +244,7 @@ func CallTimSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		Timsort(test)
+		sorts.Timsort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -256,7 +258,7 @@ func CallBitonicSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		BitonicSort(test)
+		sorts.BitonicSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
@@ -270,7 +272,7 @@ func CallParallelBitonicSort(origin []int, verify []int, callName string) Output
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		ParallelBitonicSort(test)
+		sorts.ParallelBitonicSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}

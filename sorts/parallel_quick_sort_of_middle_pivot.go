@@ -7,7 +7,7 @@
 
 // This Quick sort is implemented with middle element selected as the pivot
 
-package main
+package sorts
 
 import (
 	"runtime"

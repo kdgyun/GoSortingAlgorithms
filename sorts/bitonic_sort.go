@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func bitonicMerge(a []int, lo, len int, dir bool) {
 	if len > 1 {

@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func BubbleSort(a []int) {
 	bubbleSort(a, len(a))

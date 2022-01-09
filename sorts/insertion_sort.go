@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func InsertionSort(a []int) {
 	insertionSort(a, len(a))

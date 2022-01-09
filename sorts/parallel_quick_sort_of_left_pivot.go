@@ -7,7 +7,7 @@
 
 // This Parallel Quick sort is implemented with left element selected as the pivot
 
-package main
+package sorts
 
 import (
 	"runtime"

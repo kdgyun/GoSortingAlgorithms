@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func BottomUpMergeSort(a []int) {
 	bottomUpMergeSort(a, 0, len(a))

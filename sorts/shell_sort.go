@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 /*
  Gap sequence is based on the Ciura sequence.

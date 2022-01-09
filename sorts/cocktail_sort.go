@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package sorts
 
 func CocktailSort(a []int) {
 	cocktailSort(a, len(a))
