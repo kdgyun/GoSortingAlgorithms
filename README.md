@@ -271,9 +271,9 @@ Bitonic sort is a comparison-based sorting algorithm that can be run in parallel
 
 it supports 2 types of algorithms
 - **non-parallel**
-non-parallel bitonic sort that recursively splits the list into sublists until sublist size is 1, then merges those sublists according to the Bytonic Sequencing Rule to produce a sorted list. 
+non-parallel bitonic sort that recursively splits the list into sublists until sublist size is 1, then merges those sublists according to the Bitonic Sequencing Rule to produce a sorted list. 
 - **parallel**
-Through parallelization of recursive calls, the parallel bitonic sorting algorithm recursively splits the list into sublists until the sublist size is smaller than the threshold, and then merges the sublists according to the Bytonic Sequencing Rule to create a sorted list.
+Through parallelization of recursive calls, the parallel bitonic sorting algorithm recursively splits the list into sublists until the sublist size is smaller than the threshold, and then switches to non-parallelization to split and merge the sublists according to the Bitonic Sequencing Rule to create a sorted list.
 
 <br />
 
