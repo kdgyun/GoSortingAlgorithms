@@ -30,7 +30,7 @@ Algorithms covered so far:
 | [Quick Sort (middle-pivot with parallel)](#quick-sort)  | ParallelQuickSort |
 | [Quick Sort (left-pivot with parallel)](#quick-sort)  | ParallelQuickSortRP |
 | [Binaray Insertion Sort](#binary-insertion-sort)  | BinarySort |
-| [Tim Sort](#tim-sort)  | Timsort |
+| [Tim Sort](#tim-sort)  | TimSort |
 | [Bitonic Sort](#bitonic-sort)  | BitonicSort |
 | [Bitonic Sort (parallel)](#bitonic-sort) | ParallelBitonicSort |
 

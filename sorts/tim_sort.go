@@ -251,7 +251,7 @@ func minRunLength(runSize int) int {
 	return runSize + r
 }
 
-func Timsort(a []int) {
+func TimSort(a []int) {
 	timsort(a, 0, len(a))
 }
 

@@ -244,7 +244,7 @@ func CallTimSort(origin []int, verify []int, callName string) OutputForm {
 		copy(test, origin)
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
-		sorts.Timsort(test)
+		sorts.TimSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
