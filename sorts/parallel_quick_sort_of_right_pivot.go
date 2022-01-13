@@ -16,7 +16,7 @@ import (
 
 func ParallelQuickSortRP(a []int) {
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	quickSortLP(a, 0, len(a)-1)
+	parallelQuickSortRP(a, 0, len(a)-1)
 }
 
 func parallelQuickSortRP(a []int, lo, hi int) {
