@@ -256,6 +256,8 @@ Through parallelization of recursive calls, each parallel dual-pivot quick sorti
 
 
 
+<br />
+<br />
 
 ## Binary Insertion Sort
 
