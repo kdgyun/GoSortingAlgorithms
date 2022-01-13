@@ -41,6 +41,7 @@ func run(origin, verify []int) {
 	q = append(q, CallParallelMPQuickSort(origin, verify, "parallel middle-pivot quick sort"))
 	q = append(q, CallParallelRPQuickSort(origin, verify, "parallel right-pivot quick sort"))
 	q = append(q, CallDualPivotQuickSort(origin, verify, "dual-pivot quick sort"))
+	q = append(q, CallParallelDualPivotQuickSort(origin, verify, "parallel dual-pivot quick sort"))
 	q = append(q, CallBinaryInsertionSort(origin, verify, "binary insertion sort"))
 	q = append(q, CallTimSort(origin, verify, "tim sort"))
 	q = append(q, CallBitonicSort(origin, verify, "bitonic sort"))

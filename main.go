@@ -10,10 +10,10 @@ package main
 type Activate bool
 
 const (
-	BUBBLE_SORT                      Activate = false
-	COCKTAIL_SORT                    Activate = false
-	INSERTION_SORT                   Activate = false
-	SELECTION_SORT                   Activate = false
+	BUBBLE_SORT                      Activate = true
+	COCKTAIL_SORT                    Activate = true
+	INSERTION_SORT                   Activate = true
+	SELECTION_SORT                   Activate = true
 	SHELL_SORT                       Activate = true
 	BOTTOM_UP_MERGE_SORT             Activate = true
 	TOP_DOWN_MERGE_SORT              Activate = true
@@ -26,16 +26,17 @@ const (
 	PARALLEL_MIDDLE_PIVOT_QUICK_SORT Activate = true
 	PARALLEL_RIGHT_PIVOT_QUICK_SORT  Activate = true
 	DUAL_PIVOT_QUICK_SORT            Activate = true
-	BINARY_INSERTION_SORT            Activate = false
+	PARALLEL_DUAL_PIVOT_QUICK_SORT   Activate = true
+	BINARY_INSERTION_SORT            Activate = true
 	TIM_SORT                         Activate = true
 	BITONIC_SORT                     Activate = true
 	PARALLEL_BITONIC_SORT            Activate = true
 )
 
-var lengths = [...]int{10, 100, 10000, 100000, 1000000, 10000000} // lengths for test
+var lengths = [...]int{10, 100, 10000, 100000, 1000000} // lengths for test
 
 func main() {
-	// AscendingTest()
-	// DescendingTest()
+	AscendingTest()
+	DescendingTest()
 	RandomTest()
 }
