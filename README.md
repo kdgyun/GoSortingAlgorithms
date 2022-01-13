@@ -152,11 +152,11 @@ Conceptually, a merge sort works as follows:
 <br />
 
 it supports 3 types of algorithms
-- **top-down**
+- **top-down**   
 Top-down merge sort algorithm that recursively splits the list into sublists until sublist size is 1, then merges those sublists to produce a sorted list.
-- **bottom-up**
+- **bottom-up**   
 Bottom-up merge sort algorithm which treats the slice(array) as an slice of n sublists of size 1, and iteratively merges sub-lists back and forth between two buffers
-- **parallel**
+- **parallel**   
 Through parallelization of recursive calls, the parallel merge sorting algorithm recursively splits the list into sublists until the sublist size is smaller than the threshold, and then merges the sublists to create a sorted list.
 And sub-lists smaller than the threshold use a bottom-up list to produce a sorted list.
 
@@ -202,11 +202,11 @@ Quick Sort is based on Divide-and-conquer algorithm where it selects a pivot ele
 
 it supports 3 types of algorithms
 
-- **left-pivot (+parallel)**
+- **left-pivot (+parallel)**   
 Left-pivot Quick sort is implemented with left element selected as the pivot
-- **middle-pivot (+parallel)**
+- **middle-pivot (+parallel)**   
 Middle-pivot Quick sort is implemented with middle element selected as the pivot
-- **right-pivot (+parallel)**
+- **right-pivot (+parallel)**   
 right-pivot Quick sort is implemented with right element selected as the pivot   
 
 Through parallelization of recursive calls, each parallel quick sorting algorithms recursively splits the list into sublists until the sublist size is smaller than the threshold, and then sorts the sublists that smaller than the threshold by use a basic quick sort to create a sorted list.
@@ -238,9 +238,9 @@ it is also known as <b>3-way quick sort</b>.
 
 it supports 2 types of algorithms
 
-- **non-parallel**
+- **non-parallel**   
 Pick two elements(pivot) from the array to be sorted, partition the remaining elements into those less than the lesser pivot, those between the pivots, and those greater than the greater pivot, and recursively sort these partitions.
-- **parallel**
+- **parallel**   
 Through parallelization of recursive calls, each parallel dual-pivot quick sorting algorithms recursively splits the list into sublists until the sublist size is smaller than the threshold, and then sorts the sublists that smaller than the threshold by use a basic dual-pivot quick sort to create a sorted list.
 
 
@@ -307,9 +307,9 @@ Bitonic sort is a comparison-based sorting algorithm that can be run in parallel
 <br />
 
 it supports 2 types of algorithms
-- **non-parallel**
+- **non-parallel**   
 non-parallel bitonic sort that recursively splits the list into sublists until sublist size is 1, then merges those sublists according to the Bitonic Sequencing Rule to produce a sorted list. 
-- **parallel**
+- **parallel**   
 Through parallelization of recursive calls, the parallel bitonic sorting algorithm recursively splits the list into sublists until the sublist size is smaller than the threshold, and then switches to non-parallelization to split and merge the sublists according to the Bitonic Sequencing Rule to create a sorted list.
 
 <br />
