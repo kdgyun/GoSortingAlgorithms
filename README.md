@@ -29,6 +29,8 @@ Algorithms covered so far:
 | [Quick Sort (left-pivot with parallel)](#quick-sort)  | ParallelQuickSortLP |
 | [Quick Sort (middle-pivot with parallel)](#quick-sort)  | ParallelQuickSort |
 | [Quick Sort (left-pivot with parallel)](#quick-sort)  | ParallelQuickSortRP |
+| [Dual-pivot Quick Sort](#dual-pivot-quick-sort)  | DualPivotQuickSort |
+| [Parallel Dual-pivot Quick Sort](#dual-pivot-quick-sort)  | ParallelDualPivotQuickSort |
 | [Binaray Insertion Sort](#binary-insertion-sort)  | BinarySort |
 | [Tim Sort](#tim-sort)  | TimSort |
 | [Bitonic Sort](#bitonic-sort)  | BitonicSort |
@@ -43,7 +45,7 @@ Algorithms covered so far:
 <br />
 Bubble sort repeatedly compares and swaps adjacent elements through the list.
 
-this implementation is optimized. so, if the slice(array) is sorted, exit the bubble sort method. If you don't want to optimize, delete the swapped variable in the bubbleSort method.<br />
+This implementation is optimized. so, if the slice(array) is sorted, exit the bubble sort method. If you don't want to optimize, delete the swapped variable in the bubbleSort method.<br />
 
 ### COMPLEXITY
 
@@ -61,7 +63,7 @@ this implementation is optimized. so, if the slice(array) is sorted, exit the bu
 
 <br />
 Cocktail Sort is a variation of Bubble sort.
-it also known as Cocktail shaker sort, bidirectional bubble sort, cocktail sort, shaker sort
+it is also known as Cocktail shaker sort, bidirectional bubble sort, cocktail sort, shaker sort.
 <br />
 
 ### COMPLEXITY
@@ -79,7 +81,7 @@ it also known as Cocktail shaker sort, bidirectional bubble sort, cocktail sort,
 ## Insertion Sort
 
 <br />
-Insertion sort is finding each element from the list through each iteration to place it in correct position.
+Insertion sort is a method of finding element from the list through the iteration to place in the correct position.
 <br />
 
 ### COMPLEXITY
@@ -97,7 +99,7 @@ Insertion sort is finding each element from the list through each iteration to p
 ## Selection Sort
 
 <br />
-Selection sort is finding minimum element from the unsorted part through each iteration to place it in front position. 
+Selection sort is like finding minimum element from the unsorted part through each iteration to place it in front position. 
 <br />
 
 ### COMPLEXITY
@@ -221,6 +223,39 @@ Through parallelization of recursive calls, each parallel quick sorting algorith
 
 <br />
 <br />
+
+## Dual-Pivot Quick Sort
+
+<br />
+Dual-Pivot Quick Sort is based on Divide-and-conquer algorithm of quick sort, but there is a difference in selecting two elements (pivot) in the list to sort.
+
+Pick two elements(pivot) from the array to be sorted, partition the remaining elements into those less than the lesser pivot, those between the pivots, and those greater than the greater pivot, and recursively sort these partitions.   
+
+it is also known as <b>3-way quick sort</b>.   
+
+<br />
+<br />
+
+it supports 2 types of algorithms
+
+- **non-parallel**
+Pick two elements(pivot) from the array to be sorted, partition the remaining elements into those less than the lesser pivot, those between the pivots, and those greater than the greater pivot, and recursively sort these partitions.
+- **parallel**
+Through parallelization of recursive calls, each parallel dual-pivot quick sorting algorithms recursively splits the list into sublists until the sublist size is smaller than the threshold, and then sorts the sublists that smaller than the threshold by use a basic dual-pivot quick sort to create a sorted list.
+
+
+
+<br />
+
+### COMPLEXITY
+
+
+| Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(nlog_n)](https://latex.codecogs.com/svg.image?O(n\log&space;n)) | ![O(nlog_n)](https://latex.codecogs.com/svg.image?O(n\log&space;n)) | Yes | No | total : ![O(n)](https://latex.codecogs.com/svg.image?O(n)), auxiliary : ![O(log_n)](https://latex.codecogs.com/svg.image?O(\log&space;n)) |
+
+
+
 
 ## Binary Insertion Sort
 
