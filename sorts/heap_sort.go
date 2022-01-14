@@ -8,10 +8,10 @@
 package sorts
 
 func HeapSort(a []int) {
-	__heapSort(a, 0, len(a))
+	heapSort(a, 0, len(a))
 }
 
-func __heapSort(a []int, lo, hi int) {
+func heapSort(a []int, lo, hi int) {
 	if hi-lo < 2 {
 		return
 	}
