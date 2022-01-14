@@ -10,16 +10,16 @@
 package sorts
 
 func QuickSortLP(a []int) {
-	quickSortLP(a, 0, len(a)-1)
+	quickSortLP(a, 0, len(a))
 }
 
 func quickSortLP(a []int, lo, hi int) {
 
-	if lo >= hi {
+	if hi-lo < 2 {
 		return
 	}
-	pivot := partitionLP(a, lo, hi)
-	quickSortLP(a, lo, pivot-1)
+	pivot := partitionLP(a, lo, hi-1)
+	quickSortLP(a, lo, pivot)
 	quickSortLP(a, pivot+1, hi)
 }
 

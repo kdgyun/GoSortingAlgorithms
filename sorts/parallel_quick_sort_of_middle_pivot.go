@@ -16,20 +16,19 @@ import (
 
 func ParallelQuickSort(a []int) {
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	quickSort(a, 0, len(a)-1)
+	parallelQuickSort(a, 0, len(a))
 }
 
 func parallelQuickSort(a []int, lo, hi int) {
 
-	if lo >= hi {
+	if hi-lo < 2 {
 		return
 	}
-
+	pivot := parallelPartition(a, lo, hi-1)
 	// 2048 is threshold
 	if hi-lo > 2048 {
 		var wg sync.WaitGroup
 		wg.Add(1)
-		pivot := parallelPartition(a, lo, hi)
 
 		go func() {
 			defer wg.Done()
@@ -39,7 +38,8 @@ func parallelQuickSort(a []int, lo, hi int) {
 		parallelQuickSort(a, pivot+1, hi)
 		wg.Wait()
 	} else {
-		basicQuickSort(a, lo, hi)
+		basicQuickSort(a, lo, pivot)
+		basicQuickSort(a, pivot+1, hi)
 	}
 }
 
@@ -66,10 +66,10 @@ func parallelPartition(a []int, left, right int) int {
 
 func basicQuickSort(a []int, lo, hi int) {
 
-	if lo >= hi {
+	if hi-lo < 2 {
 		return
 	}
-	pivot := parallelPartition(a, lo, hi)
+	pivot := parallelPartition(a, lo, hi-1)
 	basicQuickSort(a, lo, pivot)
 	basicQuickSort(a, pivot+1, hi)
 }
