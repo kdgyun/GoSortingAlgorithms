@@ -8,14 +8,14 @@
 package sorts
 
 func HeapSort(a []int) {
-	heapSort(a, len(a))
+	__heapSort(a, 0, len(a))
 }
 
-func heapSort(a []int, len int) {
-	if len < 2 {
+func __heapSort(a []int, lo, hi int) {
+	if hi-lo < 2 {
 		return
 	}
-	last := len - 1
+	last := hi - 1
 	parent := ((last - 1) >> 1)
 
 	for parent >= 0 {
@@ -23,11 +23,11 @@ func heapSort(a []int, len int) {
 		parent--
 	}
 
-	end := len - 1
-	for end > 0 {
-		a[0], a[end] = a[end], a[0]
+	end := hi - 1
+	for end > lo {
+		a[lo], a[end] = a[end], a[lo]
 		end--
-		heapify(a, 0, end)
+		heapify(a, lo, end)
 	}
 }
 
