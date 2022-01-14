@@ -279,3 +279,17 @@ func CallParallelBitonicSort(origin []int, verify []int, callName string) Output
 	}
 	return OutputForm{false, callName, -1, false, ""}
 }
+
+func CallIntroSort(origin []int, verify []int, callName string) OutputForm {
+	if INTRO_SORT {
+		test := make([]int, len(origin))
+		copy(test, origin)
+		fmt.Printf("runing %s...\n", callName)
+		start := time.Now()
+		sorts.IntroSort(test)
+		end := time.Since(start)
+		eq, err := Equal(verify, test)
+		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
+	}
+	return OutputForm{false, callName, -1, false, ""}
+}
