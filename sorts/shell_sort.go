@@ -25,22 +25,22 @@ func getGap(len int) int {
 }
 
 func ShellSort(a []int) {
-	shellSort(a, len(a))
+	shellSort(a, 0, len(a), len(a))
 }
 
-func shellSort(a []int, len int) {
+func shellSort(a []int, lo, hi, len int) {
 
-	pos := getGap(len)
+	pos := getGap(hi - lo)
 
 	for pos >= 0 {
 		step := Gap[pos]
 		pos--
 
-		for i := step; i < len; i++ {
+		for i := step + lo; i < hi; i++ {
 			target := a[i]
 			j := i
 
-			for ; j >= step && target < a[j-step]; j -= step {
+			for ; j >= step+lo && target < a[j-step]; j -= step {
 				a[j] = a[j-step]
 			}
 			a[j] = target

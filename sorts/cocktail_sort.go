@@ -8,12 +8,12 @@
 package sorts
 
 func CocktailSort(a []int) {
-	cocktailSort(a, len(a))
+	cocktailSort(a, 0, len(a))
 }
 
-func cocktailSort(a []int, len int) {
-	lo := 0
-	hi := len
+func cocktailSort(a []int, left, right int) {
+	lo := left
+	hi := right
 	var swapped bool = true
 
 	for swapped {
