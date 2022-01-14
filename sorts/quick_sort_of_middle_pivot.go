@@ -10,15 +10,15 @@
 package sorts
 
 func QuickSort(a []int) {
-	quickSort(a, 0, len(a)-1)
+	quickSort(a, 0, len(a))
 }
 
 func quickSort(a []int, lo, hi int) {
 
-	if lo >= hi {
+	if hi-lo < 2 {
 		return
 	}
-	pivot := partition(a, lo, hi)
+	pivot := partition(a, lo, hi-1)
 	quickSort(a, lo, pivot)
 	quickSort(a, pivot+1, hi)
 }
