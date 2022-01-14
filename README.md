@@ -30,7 +30,7 @@ Algorithms covered so far:
 | [Quick Sort (middle-pivot with parallel)](#quick-sort)  | ParallelQuickSort |
 | [Quick Sort (left-pivot with parallel)](#quick-sort)  | ParallelQuickSortRP |
 | [Dual-pivot Quick Sort](#dual-pivot-quick-sort)  | DualPivotQuickSort |
-| [Parallel Dual-pivot Quick Sort](#dual-pivot-quick-sort)  | ParallelDualPivotQuickSort |
+| [Dual-pivot Quick Sort (parallel)](#dual-pivot-quick-sort)  | ParallelDualPivotQuickSort |
 | [Binaray Insertion Sort](#binary-insertion-sort)  | BinarySort |
 | [Tim Sort](#tim-sort)  | TimSort |
 | [Bitonic Sort](#bitonic-sort)  | BitonicSort |
@@ -321,3 +321,27 @@ Through parallelization of recursive calls, the parallel bitonic sorting algorit
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | non-parallel | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | Yes | No | total : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)), auxiliary : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) |
 | parallel | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | Yes | No | total : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)), auxiliary : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) |
+
+
+
+<br />
+<br />
+
+## Intro Sort
+
+<br />
+TBD
+
+<br />
+<br />
+
+
+
+<br />
+
+### COMPLEXITY
+
+
+| Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| ![O(nlog_n)](https://latex.codecogs.com/svg.image?O(n\log&space;n)) | ![O(nlog_n)](https://latex.codecogs.com/svg.image?O(n\log&space;n)) |  ![O(nlog_n)](https://latex.codecogs.com/svg.image?O(n\log&space;n)) | Yes | No | total : ![O(n)](https://latex.codecogs.com/svg.image?O(n)), auxiliary : ![O(log_n)](https://latex.codecogs.com/svg.image?O(\log&space;n)) |
