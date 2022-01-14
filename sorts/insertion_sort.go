@@ -8,12 +8,12 @@
 package sorts
 
 func InsertionSort(a []int) {
-	insertionSort(a, len(a))
+	insertionSort(a, 0, len(a))
 }
 
-func insertionSort(a []int, len int) {
+func insertionSort(a []int, lo, hi int) {
 
-	for i := 1; i < len; i++ {
+	for i := lo + 1; i < hi; i++ {
 		target := a[i]
 		j := i - 1
 
