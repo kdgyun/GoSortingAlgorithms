@@ -17,7 +17,7 @@ func insertionSort(a []int, lo, hi int) {
 		target := a[i]
 		j := i - 1
 
-		for j >= 0 && target < a[j] {
+		for j >= lo && target < a[j] {
 			a[j+1] = a[j]
 			j--
 		}

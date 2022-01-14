@@ -12,13 +12,14 @@ func HeapSort(a []int) {
 }
 
 func heapSort(a []int, lo, hi int) {
+
 	if hi-lo < 2 {
 		return
 	}
 	last := hi - 1
 	parent := ((last - 1) >> 1)
 
-	for parent >= 0 {
+	for parent >= lo {
 		heapify(a, parent, last)
 		parent--
 	}

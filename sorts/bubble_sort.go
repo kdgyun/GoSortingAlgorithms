@@ -8,15 +8,15 @@
 package sorts
 
 func BubbleSort(a []int) {
-	bubbleSort(a, len(a))
+	bubbleSort(a, 0, len(a))
 }
 
-func bubbleSort(a []int, len int) {
+func bubbleSort(a []int, lo, hi int) {
 
-	for i := 1; i < len; i++ {
+	for i := lo + 1; i < hi; i++ {
 		var swapped bool = false
 
-		for j := 0; j < len-i; j++ {
+		for j := lo; j < hi-i; j++ {
 			if a[j] > a[j+1] {
 				a[j], a[j+1] = a[j+1], a[j] // swap
 				swapped = true
