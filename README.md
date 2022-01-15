@@ -36,7 +36,7 @@ Algorithms covered so far:
 | [Bitonic Sort](#bitonic-sort)  | BitonicSort |
 | [Bitonic Sort (parallel)](#bitonic-sort) | ParallelBitonicSort |
 | [Intro Sort](#intro-sort) | IntroSort |
-| [Intro Sort (parallel)](#inrto-sort) | ParallelIntroSort |
+| [Intro Sort (parallel)](#intro-sort) | ParallelIntroSort |
 
 
 <br />
