@@ -332,7 +332,9 @@ Through parallelization of recursive calls, the parallel bitonic sorting algorit
 ## Intro Sort
 
 <br />
-Introsort is a hybrid sorting algorithm that provides both fast average performance and (asymptotically) optimal worst-case performance. It begins with quicksort, it switches to heapsort when the recursion depth exceeds a level based on (maximum depth: <span> ![2ceil(log2_n))](https://latex.codecogs.com/svg.image?2&space;&space;\left&space;\lfloor&space;\log_2(n)&space;\right&space;\rfloor) </span> of) the number of elements being sorted and it switches to insertion sort when the number of elements is below some threshold(16).   
+Introsort is a hybrid sorting algorithm that provides both fast average performance and (asymptotically) optimal worst-case performance. It begins with quicksort, it switches to heapsort when the recursion depth exceeds a level based on 
+(maximum depth: <span> ![2ceil(log2_n))](https://latex.codecogs.com/svg.image?2&space;&space;\left&space;\lfloor&space;\log_2(n)&space;\right&space;\rfloor) </span> of)
+the number of elements being sorted and it switches to insertion sort when the number of elements is below some threshold(16).   
 
 <br />
 <br />
