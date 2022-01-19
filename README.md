@@ -331,11 +331,14 @@ Through parallelization of recursive calls, the parallel bitonic sorting algorit
 
 ## Intro Sort
 
-<br />
-Introsort is a hybrid sorting algorithm that provides both fast average performance and (asymptotically) optimal worst-case performance. It begins with quicksort, it switches to heapsort when the recursion depth exceeds a level based on 
-(maximum depth: <span> ![2ceil(log2_n))](https://latex.codecogs.com/svg.image?2&space;&space;\left&space;\lfloor&space;\log_2(n)&space;\right&space;\rfloor) </span> of)
-the number of elements being sorted and it switches to insertion sort when the number of elements is below some threshold(16).   
+<br />   
 
+Introsort is a hybrid sorting algorithm that provides both fast average performance and (asymptotically) optimal worst-case performance. It begins with quicksort, it switches to heapsort when the recursion depth exceeds a level based on
+(maximum depth:
+<span> ![2ceil(log2_n)](https://latex.codecogs.com/svg.image?2&space;&space;\left&space;\lfloor&space;\log_2(n)&space;\right&space;\rfloor) </span>
+of)
+the number of elements being sorted and it switches to insertion sort when the number of elements is below some threshold(16).   
+   
 <br />
 <br />
 
@@ -344,7 +347,9 @@ it supports 2 types of algorithms
 
 - **non-parallel**   
 Pick a element(pivot) when uses quick sort from the array to be sorted, partition the other elements into two sub-arrays according to whether they are less than or greater than the pivot, and recursively sort these partitions until the recursion depth exceeds a level based on
-(maximum depth: <span> ![2ceil(log2_n))](https://latex.codecogs.com/svg.image?2&space;&space;\left&space;\lfloor&space;\log_2(n)&space;\right&space;\rfloor) </span>  of)
+(maximum depth:
+<span> ![2ceil(log2_n)](https://latex.codecogs.com/svg.image?2&space;&space;\left&space;\lfloor&space;\log_2(n)&space;\right&space;\rfloor) </span>
+of)
 the number of elements.
 - **parallel**   
 Through parallelization of recursive calls, each parallel dual-pivot quick sorting algorithms recursively splits the list into sublists until the sublist size is smaller than the threshold, and then sorts the sublists that smaller than the threshold by use a basic dual-pivot quick sort to create a sorted list.
