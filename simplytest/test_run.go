@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package simplytest
 
 import (
 	"fmt"
@@ -23,7 +23,7 @@ type OutputForm struct {
 
 type Queue []OutputForm
 
-func run(origin, verify []int) {
+func callSortTest(origin, verify []int) {
 	var q Queue
 	q = append(q, CallBubbleSort(origin, verify, "bubble sort"))
 	q = append(q, CallCocktailSort(origin, verify, "cocktail sort"))

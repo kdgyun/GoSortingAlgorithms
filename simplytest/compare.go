@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package simplytest
 
 import "fmt"
 

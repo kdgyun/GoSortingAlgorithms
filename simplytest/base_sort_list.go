@@ -5,13 +5,13 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package simplytest
 
 import (
 	"fmt"
 	"time"
 
-	"GoSortingAlgorithms/sorts"
+	"github.com/kdgyun/GoSortingAlgorithms/sorts"
 )
 
 func CallBubbleSort(origin []int, verify []int, callName string) OutputForm {

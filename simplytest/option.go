@@ -5,7 +5,7 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package simplytest
 
 type Activate bool
 
@@ -36,9 +36,3 @@ const (
 )
 
 var lengths = [...]int{10, 100, 1000, 10000, 100000, 1000000} // lengths for test
-
-func main() {
-	AscendingTest()
-	DescendingTest()
-	RandomTest()
-}

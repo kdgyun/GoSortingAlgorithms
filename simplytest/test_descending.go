@@ -5,24 +5,24 @@
   link : https://github.com/kdgyun
 */
 
-package main
+package simplytest
 
 import (
 	"fmt"
 	"strings"
 )
 
-func AscendingTest() {
+func DescendingTest() {
 	fmt.Printf("\n+%s+\n", strings.Repeat("=", 82))
-	fmt.Printf("|%48s%34s|\n", "Ascending Test", " ")
+	fmt.Printf("|%49s%33s|\n", "Descending Test", " ")
 	fmt.Printf("+%s+\n\n\n", strings.Repeat("=", 82))
 	for _, v := range lengths {
-		runAscending(v)
+		runDescending(v)
 	}
 }
+func runDescending(len int) {
 
-func runAscending(len int) {
-	origin, verify := ASCENDING_INT(len)
+	origin, verify := DESCENDING_INT(len)
 
-	run(origin, verify)
+	callSortTest(origin, verify)
 }
