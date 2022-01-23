@@ -33,6 +33,7 @@ const (
 	PARALLEL_BITONIC_SORT            Activate = true
 	INTRO_SORT                       Activate = true
 	PARALLEL_INTRO_SORT              Activate = true
+	CYCLE_SORT                       Activate = true
 )
 
 var lengths = [...]int{10, 100, 1000, 10000, 100000, 1000000} // lengths for test

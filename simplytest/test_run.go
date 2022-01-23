@@ -48,6 +48,7 @@ func callSortTest(origin, verify []int) {
 	q = append(q, CallParallelBitonicSort(origin, verify, "parallel bitonic sort"))
 	q = append(q, CallIntroSort(origin, verify, "intro sort"))
 	q = append(q, CallParallelIntroSort(origin, verify, "parallel intro sort"))
+	q = append(q, CallCycleSort(origin, verify, "cycle sort"))
 	var pf string = ""
 
 	pf += fmt.Sprintf("\n+%s+\n", strings.Repeat("-", 97))
