@@ -15,7 +15,7 @@ func bottomUpMergeSort(a []int, left int, right int) {
 	temp := make([]int, right)
 	for size := 1; size < right; size += size {
 
-		for l := 0; l < right-size; l += (2 * size) {
+		for l := left; l < right-size; l += (2 * size) {
 			var high int
 			mid := l + size
 
