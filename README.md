@@ -5,10 +5,107 @@
  Various Sorting Algorithms with golang :octocat:
    
 
-<br /><br />
+<br /><br />    
+
+## :beginner: Installation   
+
+Once you have installed Go, run the go get command to install the GoSoringAlgorithms package:   
+
+```shell
+$ go get github.com/kdgyun/GoSortingAlgorithms
+```   
 
 
-## SUMMARY
+<br /><br />   
+
+## :book: Usage   
+
+it's simple!
+
+```go
+
+package main
+
+import (
+	"github.com/kdgyun/GoSortingAlgorithms/sorts"
+
+	crand "crypto/rand"
+	"fmt"
+	"math"
+	"math/big"
+	"math/rand"
+	"sort"
+)
+
+// generate random data
+func SliceBuilder(len int) []int {
+	seed, _ := crand.Int(crand.Reader, big.NewInt(math.MaxInt64))
+	rand.Seed(seed.Int64())
+
+	var slice []int
+	for i := 0; i < len; i++ {
+		slice = append(slice, rand.Int())
+	}
+	return slice
+}
+
+func main() {
+	slice := SliceBuilder(1000000)
+ 
+	sorts.QuickSort(slice) // sorts.____(slice []int)
+
+	isSorted := sort.SliceIsSorted(slice, func(i, j int) bool {
+		return slice[i] < slice[j]
+	})
+	fmt.Print(isSorted)
+}
+
+```
+
+
+
+<br /><br />   
+
+## :test_tube: Simply Test   
+
+It's easy to get test of all sorting algorithms with simplytest. 
+
+```go
+
+package main
+
+import (
+	"github.com/kdgyun/GoSortingAlgorithms/simplytest"
+)
+
+func main() {
+	simplytest.RunTest()
+}
+
+
+```   
+
+<br />   
+
+### Option
+
+1. Select sorting algorithm.   
+  If you want to test only a specific sorting algorithm, you can change it as follows.   
+```simplytest/option.go``` -> Find the sort name you want to change and change the variable to true or false. (true : execute, false : Not execute)   
+it is set to True by default.   
+
+2. Change the length of the slice to be tested.
+   If you want to determine the length of the slice to be tested, change the value within the lengths of ```option.go``` .
+
+
+
+
+<br />   
+<br />   
+
+
+
+## :mag_right: SUMMARY
 
 Algorithms covered so far:
 
