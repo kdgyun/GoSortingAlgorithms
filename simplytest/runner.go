@@ -8,7 +8,13 @@
 package simplytest
 
 func RunTest() {
-	AscendingTest()
-	DescendingTest()
-	RandomTest()
+	if ASCENDING_TEST {
+		AscendingTest()
+	}
+	if DESCENDING_TEST {
+		DescendingTest()
+	}
+	if RANDOM_TEST {
+		RandomTest()
+	}
 }

@@ -9,6 +9,8 @@ package simplytest
 
 type Activate bool
 
+// Section 1.
+// sorting algorithm test list
 const (
 	BUBBLE_SORT                      Activate = true
 	COCKTAIL_SORT                    Activate = true
@@ -36,4 +38,14 @@ const (
 	CYCLE_SORT                       Activate = true
 )
 
-var lengths = [...]int{10, 100, 1000, 10000, 100000, 1000000} // lengths for test
+// Section 2.
+// The type of slice to be tested.
+const (
+	ASCENDING_TEST  Activate = true
+	RANDOM_TEST     Activate = true
+	DESCENDING_TEST Activate = true
+)
+
+// Section 3.
+// lengths for test
+var lengths = [...]int{10, 100, 1000, 10000, 100000}

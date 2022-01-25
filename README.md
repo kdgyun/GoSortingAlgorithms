@@ -86,16 +86,74 @@ func main() {
 ```   
 
 <br />   
+<br />   
 
-### Option
+<b>Example of Output</b>   
 
-1. Select sorting algorithm.   
-  If you want to test only a specific sorting algorithm, you can change it as follows.   
-```simplytest/option.go``` -> Find the sort name you want to change and change the variable to true or false. (true : execute, false : Not execute)   
-it is set to True by default.   
+```
+
++==================================================================================+
+|                                   Random Test                                    |
++==================================================================================+
+
+...
+
+[array length : 100000]
+make arrays...
+runing bubble sort...
+runing cocktail sort...
+
+...
+
+runing intro sort...
+runing parallel intro sort...
+runing cycle sort...
+
++-------------------------------------------------------------------------------------------------+
+|                                name |                      ns |                 ms |     verify |      (err mag) 
+|-------------------------------------------------------------------------------------------------|
+|                         bubble sort |          13016202738 ns |           13016 ms |       true |
+|-------------------------------------------------------------------------------------------------|
+|                       cocktail sort |           8922656474 ns |            8922 ms |       true |
+|-------------------------------------------------------------------------------------------------|
+|                            tim sort |             11419013 ns |              11 ms |       true |
+|-------------------------------------------------------------------------------------------------|
+|                        bitonic sort |             32333072 ns |              32 ms |       true |
+|-------------------------------------------------------------------------------------------------|
+
+...
+
+|-------------------------------------------------------------------------------------------------|
+|                          intro sort |              6665792 ns |               6 ms |       true |
+|-------------------------------------------------------------------------------------------------|
+|                 parallel intro sort |              2537508 ns |               2 ms |       true |
+|-------------------------------------------------------------------------------------------------|
+|                          cycle sort |          20209957747 ns |           20209 ms |       true |
++-------------------------------------------------------------------------------------------------+
+
+```
+
+<br />   
+<br />   
+
+
+
+### Option   
+
+There is an ```option.go``` file so that users can easily adjust the test, and you can adjust three major options in that file.   
+
+
+1. Select the sorting algorithm.
+   If you want to test only a specific sorting algorithm, find the sorting name you want to change and change the variable to true or false. (True : enable, false : disable)  
+   > ex) <b> SHELL_SORT  Activate = false </b>   
 
 2. Change the length of the slice to be tested.
-   If you want to determine the length of the slice to be tested, change the value within the lengths of ```option.go``` .
+	To change the length of the slice to be tested, configure the slice of the variable 'lengths' to the desired value.  
+   > ex) <b> ASCENDING_TEST Activate = false </b>   
+
+
+3. You can activate or disable the data type of slice to be tested. Basically, all slices consisting of ascending, descending, and random data are tested. However, if you want to disable a specific data type, change the variable to false.   
+   > ex) <b> var lengths = [...]int{35, 50000, 100000} </b>
 
 
 
