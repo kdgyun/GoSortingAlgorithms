@@ -91,3 +91,6 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos,go,visualstudiocode,git
 
 cl.go
+
+#bin
+GoSortingAlgorithms
