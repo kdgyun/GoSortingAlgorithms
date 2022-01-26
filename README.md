@@ -1,3 +1,9 @@
+![](https://img.shields.io/github/go-mod/go-version/kdgyun/GoSortingAlgorithms/main)
+![](https://img.shields.io/github/issues/kdgyun/GoSortingAlgorithms) 
+![](https://img.shields.io/github/commit-status/kdgyun/GoSortingAlgorithms/main/ee331ab723bf79aa3b98a2c4e143bd07eee5b1f2)
+![](https://img.shields.io/github/repo-size/kdgyun/GoSortingAlgorithms)
+![](https://github.com/kdgyun/GoSortingAlgorithms/actions/workflows/go.yml/badge.svg?branch=main)
+
 # GoSortingAlgorithms
 
 <br />
