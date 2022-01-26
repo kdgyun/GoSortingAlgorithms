@@ -1,0 +1,28 @@
+name: Go
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Build
+      run: go build -v ./...
+
+    - name: Test
+      run: go test -timeout 2m -v ./glob_bench_test/sort_test.go
+      
+    - name: Benchmark
+      run: go test -bench=. -cpu 1,2,4,8,16,32 -benchmem -v ./glob_bench_test/sort_bench_test.go 
