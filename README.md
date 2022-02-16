@@ -199,6 +199,7 @@ Algorithms covered so far:
 | [Intro Sort](#intro-sort) | IntroSort |
 | [Intro Sort (parallel)](#intro-sort) | ParallelIntroSort |
 | [Cycle Sort](#cycle-sort) | CycleSort |
+| [Odd-Even Sort](#odd-even-sort) | OddEvenSort |
 
 
 <br />
