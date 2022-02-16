@@ -25,4 +25,4 @@ jobs:
       run: go test -timeout 20m -v ./glob_bench_test/sort_test.go
       
     - name: Benchmark
-      run: go test -bench=. -cpu 1,2,4,8,16,32 -benchmem -v ./glob_bench_test/sort_bench_test.go 
+      run: go test -timeout 20m -bench=. -cpu 1,2,4,8,16,32 -benchmem -v ./glob_bench_test/sort_bench_test.go 
