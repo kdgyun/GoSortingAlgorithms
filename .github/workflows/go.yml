@@ -22,7 +22,7 @@ jobs:
       run: go build -v ./...
 
     - name: Test
-      run: go test -timeout 2m -v ./glob_bench_test/sort_test.go
+      run: go test -timeout 4m -v ./glob_bench_test/sort_test.go
       
     - name: Benchmark
       run: go test -bench=. -cpu 1,2,4,8,16,32 -benchmem -v ./glob_bench_test/sort_bench_test.go 

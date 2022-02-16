@@ -186,7 +186,7 @@ func TestSort(t *testing.T) {
 		t.Run("intro sort", func(t *testing.T) { sorts.IntroSort(test) })
 
 		if !reflect.DeepEqual(test, verify) {
-			t.Error("Wrong result intro sort]")
+			t.Error("Wrong result [intro sort]")
 		}
 
 		test = make([]int, len(origin))
@@ -194,7 +194,7 @@ func TestSort(t *testing.T) {
 		t.Run("parallel intro sort", func(t *testing.T) { sorts.ParallelIntroSort(test) })
 
 		if !reflect.DeepEqual(test, verify) {
-			t.Error("Wrong result parallel intro sort]")
+			t.Error("Wrong result [parallel intro sort]")
 		}
 
 		test = make([]int, len(origin))
@@ -202,7 +202,15 @@ func TestSort(t *testing.T) {
 		t.Run("cycle sort", func(t *testing.T) { sorts.CycleSort(test) })
 
 		if !reflect.DeepEqual(test, verify) {
-			t.Error("Wrong result cycle sort]")
+			t.Error("Wrong result [cycle sort]")
+		}
+
+		test = make([]int, len(origin))
+		copy(test, origin)
+		t.Run("odd-even sort", func(t *testing.T) { sorts.OddEvenSort(test) })
+
+		if !reflect.DeepEqual(test, verify) {
+			t.Error("Wrong result [odd-even sort]")
 		}
 		size *= 10
 	}

@@ -542,3 +542,21 @@ Cycle sort is an in-place sorting Algorithm, unstable sorting algorithm, a compa
 | Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | Yes | No | total : ![O(n)](https://latex.codecogs.com/svg.image?O(n)), auxiliary : ![O(1)](https://latex.codecogs.com/svg.image?O(1)) |
+
+
+
+<br />
+<br />
+
+## Odd-Even Sort
+
+<br />
+In computing, an odd–even sort or odd–even transposition sort (also known as brick sort or parity sort) is a relatively simple sorting algorithm, developed originally for use on parallel processors with local interconnections.
+<br />
+
+### COMPLEXITY
+
+
+| Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n)) | Yes | Yes | total : ![O(n)](https://latex.codecogs.com/svg.image?O(n)), auxiliary : ![O(1)](https://latex.codecogs.com/svg.image?O(1)) |

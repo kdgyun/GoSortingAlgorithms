@@ -336,3 +336,16 @@ func BenchmarkCycleSort(b *testing.B) {
 		b.StopTimer()
 	}
 }
+
+func BenchmarkOddEvenSort(b *testing.B) {
+	b.StopTimer()
+	unsorted := sliceBuilder(100000)
+	test := make([]int, len(unsorted))
+
+	for i := 0; i < b.N; i++ {
+		copy(test, unsorted)
+		b.StartTimer()
+		sorts.OddEvenSort(test)
+		b.StopTimer()
+	}
+}

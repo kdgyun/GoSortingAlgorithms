@@ -36,6 +36,7 @@ const (
 	INTRO_SORT                       Activate = true
 	PARALLEL_INTRO_SORT              Activate = true
 	CYCLE_SORT                       Activate = true
+	ODDEVEN_SORT                     Activate = true
 )
 
 // Section 2.
