@@ -37,6 +37,7 @@ const (
 	PARALLEL_INTRO_SORT              Activate = true
 	CYCLE_SORT                       Activate = true
 	ODDEVEN_SORT                     Activate = true
+	ODDEVEN_MERGE_SORT               Activate = true // The length n of the array must be a power of 2
 )
 
 // Section 2.
@@ -49,4 +50,4 @@ const (
 
 // Section 3.
 // lengths for test
-var lengths = [...]int{10, 100, 1000, 10000, 100000}
+var lengths = [...]int{1 << 4, 1 << 7, 1 << 10, 1 << 13, 1 << 16}

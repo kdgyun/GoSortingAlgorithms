@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"github.com/kdgyun/GoSortingAlgorithms/sorts"
+	"github.com/logrusorgru/aurora/v3"
 )
 
 func CallBubbleSort(origin []int, verify []int, callName string) OutputForm {
@@ -357,6 +358,26 @@ func CallOddEvenSort(origin []int, verify []int, callName string) OutputForm {
 		fmt.Printf("runing %s...\n", callName)
 		start := time.Now()
 		sorts.OddEvenSort(test)
+		end := time.Since(start)
+		eq, err := Equal(verify, test)
+		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
+	}
+	return OutputForm{false, callName, -1, false, ""}
+}
+
+func CallOddEvenMergeSort(origin []int, verify []int, callName string) OutputForm {
+	size := len(origin)
+	if (size & (size - 1)) != 0 {
+		fmt.Println(aurora.Bold(aurora.BrightRed("[Skip] ")), aurora.BrightRed("top-down odd-even sort can't run"))
+		fmt.Println(aurora.BrightYellow("\tIf you want to use this sort algorithm,\n\tlength of the array must be a power of 2."))
+		return OutputForm{false, callName, -1, false, ""}
+	}
+	if ODDEVEN_MERGE_SORT {
+		test := make([]int, len(origin))
+		copy(test, origin)
+		fmt.Printf("runing %s...\n", callName)
+		start := time.Now()
+		sorts.OddEvenMergeSort(test)
 		end := time.Since(start)
 		eq, err := Equal(verify, test)
 		return OutputForm{true, callName, end.Nanoseconds(), eq, err}

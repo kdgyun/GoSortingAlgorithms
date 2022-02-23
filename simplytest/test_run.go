@@ -11,6 +11,8 @@ import (
 	"fmt"
 	"strings"
 	"time"
+
+	"github.com/logrusorgru/aurora/v3"
 )
 
 type OutputForm struct {
@@ -50,10 +52,11 @@ func callSortTest(origin, verify []int) {
 	q = append(q, CallParallelIntroSort(origin, verify, "parallel intro sort"))
 	q = append(q, CallCycleSort(origin, verify, "cycle sort"))
 	q = append(q, CallOddEvenSort(origin, verify, "odd-even sort"))
+	q = append(q, CallOddEvenMergeSort(origin, verify, "odd-even merge sort"))
 	var pf string = ""
 
 	pf += fmt.Sprintf("\n+%s+\n", strings.Repeat("-", 97))
-	pf += fmt.Sprintf("| %35s | %23s | %18s | %10s | \t (err mag) \n", "name", "ns", "ms", "verify")
+	pf += fmt.Sprintf("| %35s | %23s | %18s | %10s | \t %s \n", "name", "ns", "ms", "verify", aurora.BrightRed("(err mag)"))
 
 	for _, v := range q {
 		if v.active {

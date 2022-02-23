@@ -200,6 +200,7 @@ Algorithms covered so far:
 | [Intro Sort (parallel)](#intro-sort) | ParallelIntroSort |
 | [Cycle Sort](#cycle-sort) | CycleSort |
 | [Odd-Even Sort](#odd-even-sort) | OddEvenSort |
+| [Odd-Even Merge Sort](#odd-even-merge-sort) | OddEvenMergeSort |
 
 
 <br />
@@ -561,3 +562,32 @@ In computing, an odd–even sort or odd–even transposition sort (also known as
 | Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2)](https://latex.codecogs.com/svg.image?O(n)) | Yes | Yes | total : ![O(n)](https://latex.codecogs.com/svg.image?O(n)), auxiliary : ![O(1)](https://latex.codecogs.com/svg.image?O(1)) |
+
+
+
+<br />
+<br />
+
+## Odd-Even Merge Sort
+
+<br />   
+
+odd–even mergesort is a generic construction devised by Ken Batcher for sorting networks of 
+size
+<span> ![O(n(log_n)^2)](https://latex.codecogs.com/svg.image?O(n(\log&space;n)^2)) </span>  
+and depth
+<span> ![O((log_n)^2)](https://latex.codecogs.com/svg.image?O((\log&space;n)^2)) </span> 
+where n is the number of items to be sorted.    
+
+\[todo] add parallel-ver.
+
+
+<br />
+
+### COMPLEXITY
+
+
+| Type | Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| non-parallel | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | Yes | yes | total : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)), auxiliary : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) |
+| parallel | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | Yes | yes | total : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)), auxiliary : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) |

@@ -11,6 +11,8 @@ import (
 	"github.com/kdgyun/GoSortingAlgorithms/sorts"
 )
 
+var lengthforbench = 1 << 16
+
 func sliceBuilder(len int) []int {
 	seed, _ := crand.Int(crand.Reader, big.NewInt(math.MaxInt64))
 	rand.Seed(seed.Int64())
@@ -27,7 +29,7 @@ func sliceBuilder(len int) []int {
 
 func BenchmarkBubbleSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -40,7 +42,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 
 func BenchmarkCocktailSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -53,7 +55,7 @@ func BenchmarkCocktailSort(b *testing.B) {
 
 func BenchmarkInsertionSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -66,7 +68,7 @@ func BenchmarkInsertionSort(b *testing.B) {
 
 func BenchmarkSelectionSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -79,7 +81,7 @@ func BenchmarkSelectionSort(b *testing.B) {
 
 func BenchmarkShellSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -92,7 +94,7 @@ func BenchmarkShellSort(b *testing.B) {
 
 func BenchmarkBottomUpMergeSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -105,7 +107,7 @@ func BenchmarkBottomUpMergeSort(b *testing.B) {
 
 func BenchmarkTopDownMergeSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -118,7 +120,7 @@ func BenchmarkTopDownMergeSort(b *testing.B) {
 
 func BenchmarkParallelMergeSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -131,7 +133,7 @@ func BenchmarkParallelMergeSort(b *testing.B) {
 
 func BenchmarkHeapSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -144,7 +146,7 @@ func BenchmarkHeapSort(b *testing.B) {
 
 func BenchmarkQuickSortLP(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -157,7 +159,7 @@ func BenchmarkQuickSortLP(b *testing.B) {
 
 func BenchmarkQuickSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -170,7 +172,7 @@ func BenchmarkQuickSort(b *testing.B) {
 
 func BenchmarkQuickSortRP(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -183,7 +185,7 @@ func BenchmarkQuickSortRP(b *testing.B) {
 
 func BenchmarkParallelQuickSortLP(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -196,7 +198,7 @@ func BenchmarkParallelQuickSortLP(b *testing.B) {
 
 func BenchmarkParallelQuickSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -209,7 +211,7 @@ func BenchmarkParallelQuickSort(b *testing.B) {
 
 func BenchmarkParallelQuickSortRP(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -222,7 +224,7 @@ func BenchmarkParallelQuickSortRP(b *testing.B) {
 
 func BenchmarkDualPivotQuickSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -235,7 +237,7 @@ func BenchmarkDualPivotQuickSort(b *testing.B) {
 
 func BenchmarkParallelDualPivotQuickSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -248,7 +250,7 @@ func BenchmarkParallelDualPivotQuickSort(b *testing.B) {
 
 func BenchmarkBinarySort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -261,7 +263,7 @@ func BenchmarkBinarySort(b *testing.B) {
 
 func BenchmarkTimSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -274,7 +276,7 @@ func BenchmarkTimSort(b *testing.B) {
 
 func BenchmarkBitonicSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -287,7 +289,7 @@ func BenchmarkBitonicSort(b *testing.B) {
 
 func BenchmarkParallelBitonicSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -300,7 +302,7 @@ func BenchmarkParallelBitonicSort(b *testing.B) {
 
 func BenchmarkIntroSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -313,7 +315,7 @@ func BenchmarkIntroSort(b *testing.B) {
 
 func BenchmarkParallelIntroSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -326,7 +328,7 @@ func BenchmarkParallelIntroSort(b *testing.B) {
 
 func BenchmarkCycleSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
@@ -339,13 +341,26 @@ func BenchmarkCycleSort(b *testing.B) {
 
 func BenchmarkOddEvenSort(b *testing.B) {
 	b.StopTimer()
-	unsorted := sliceBuilder(100000)
+	unsorted := sliceBuilder(lengthforbench)
 	test := make([]int, len(unsorted))
 
 	for i := 0; i < b.N; i++ {
 		copy(test, unsorted)
 		b.StartTimer()
 		sorts.OddEvenSort(test)
+		b.StopTimer()
+	}
+}
+
+func BenchmarkOddEvenMergeSort(b *testing.B) {
+	b.StopTimer()
+	unsorted := sliceBuilder(lengthforbench)
+	test := make([]int, len(unsorted))
+
+	for i := 0; i < b.N; i++ {
+		copy(test, unsorted)
+		b.StartTimer()
+		sorts.OddEvenMergeSort(test)
 		b.StopTimer()
 	}
 }

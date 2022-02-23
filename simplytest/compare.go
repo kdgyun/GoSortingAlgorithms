@@ -16,7 +16,7 @@ func Equal(verify, b []int) (bool, string) {
 	}
 	for i, v := range verify {
 		if v != b[i] {
-			s := fmt.Sprintf("\t1st diff : elements\tstart idx %d [...(correct v : %d, incorrect v : %d) ...]",
+			s := fmt.Sprintf("\t1elements not sorted",
 				i, verify[i], b[i])
 			fmt.Errorf(s)
 			return false, s
