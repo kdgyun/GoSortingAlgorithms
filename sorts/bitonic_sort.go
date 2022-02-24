@@ -43,18 +43,3 @@ func greatestPowerOfTwoLessThan(n int) int {
 	}
 	return k >> 1
 }
-func BottomUpBitonicSort(a []int) {
-
-}
-
-func bottomUpBitonicSort(a []int, len int) {
-
-	for blockSize := 2; blockSize <= len; blockSize <<= 1 {
-		for subPart := blockSize / 2; subPart > 0; subPart >>= 1 {
-
-			for i := 0; i < len; i++ {
-
-			}
-		}
-	}
-}

@@ -53,6 +53,7 @@ func callSortTest(origin, verify []int) {
 	q = append(q, CallCycleSort(origin, verify, "cycle sort"))
 	q = append(q, CallOddEvenSort(origin, verify, "odd-even sort"))
 	q = append(q, CallOddEvenMergeSort(origin, verify, "odd-even merge sort"))
+	q = append(q, CallParallelOddEvenMergeSort(origin, verify, "parallel odd-even merge sort"))
 	var pf string = ""
 
 	pf += fmt.Sprintf("\n+%s+\n", strings.Repeat("-", 97))

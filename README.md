@@ -201,6 +201,7 @@ Algorithms covered so far:
 | [Cycle Sort](#cycle-sort) | CycleSort |
 | [Odd-Even Sort](#odd-even-sort) | OddEvenSort |
 | [Odd-Even Merge Sort](#odd-even-merge-sort) | OddEvenMergeSort |
+| [Odd-Even Merge Sort (parallel)](#odd-even-merge-sort) | ParallelOddEvenMergeSort |
 
 
 <br />
@@ -579,7 +580,7 @@ and depth
 <span> ![O((log_n)^2)](https://latex.codecogs.com/svg.image?O((\log&space;n)^2)) </span> 
 where n is the number of items to be sorted.    
 
-\[todo] add parallel-ver.
+
 
 
 <br />

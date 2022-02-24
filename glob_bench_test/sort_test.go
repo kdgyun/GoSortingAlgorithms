@@ -220,6 +220,14 @@ func TestSort(t *testing.T) {
 		if !reflect.DeepEqual(test, verify) {
 			t.Error("Wrong result [odd-even sort]")
 		}
+
+		test = make([]int, len(origin))
+		copy(test, origin)
+		t.Run("parallel odd-even merge sort", func(t *testing.T) { sorts.ParallelOddEvenMergeSort(test) })
+
+		if !reflect.DeepEqual(test, verify) {
+			t.Error("Wrong result [parallel odd-even sort]")
+		}
 		size <<= 2
 	}
 }

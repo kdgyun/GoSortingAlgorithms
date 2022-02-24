@@ -38,6 +38,7 @@ const (
 	CYCLE_SORT                       Activate = true
 	ODDEVEN_SORT                     Activate = true
 	ODDEVEN_MERGE_SORT               Activate = true // The length n of the array must be a power of 2
+	PARALLEL_ODDEVEN_MERGE_SORT      Activate = true // The length n of the array must be a power of 2
 )
 
 // Section 2.

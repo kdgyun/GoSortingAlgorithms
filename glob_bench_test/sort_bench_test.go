@@ -364,3 +364,16 @@ func BenchmarkOddEvenMergeSort(b *testing.B) {
 		b.StopTimer()
 	}
 }
+
+func BenchmarkParallelOddEvenMergeSort(b *testing.B) {
+	b.StopTimer()
+	unsorted := sliceBuilder(lengthforbench)
+	test := make([]int, len(unsorted))
+
+	for i := 0; i < b.N; i++ {
+		copy(test, unsorted)
+		b.StartTimer()
+		sorts.ParallelOddEvenMergeSort(test)
+		b.StopTimer()
+	}
+}
