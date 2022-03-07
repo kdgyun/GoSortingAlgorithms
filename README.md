@@ -202,6 +202,7 @@ Algorithms covered so far:
 | [Odd-Even Sort](#odd-even-sort) | OddEvenSort |
 | [Odd-Even Merge Sort](#odd-even-merge-sort) | OddEvenMergeSort |
 | [Odd-Even Merge Sort (parallel)](#odd-even-merge-sort) | ParallelOddEvenMergeSort |
+| [Comb Sort](#comb-sort) | CombSort |
 
 
 <br />
@@ -592,3 +593,21 @@ where n is the number of items to be sorted.
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | non-parallel | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) | Yes | yes | total : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)), auxiliary : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) |
 | parallel | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | ![O(log^2_n)](https://latex.codecogs.com/svg.image?O(\log^2&space;n)) | Yes | yes | total : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)), auxiliary : ![O(nlog^2_n)](https://latex.codecogs.com/svg.image?O(n\log^2&space;n)) |
+
+
+
+<br />
+<br />
+
+## Comb Sort
+
+<br />
+Comb sort is a relatively simple sorting algorithm originally designed by Włodzimierz Dobosiewicz and Artur Borowy in 1980, later rediscovered (and given the name "Combsort") by Stephen Lacey and Richard Box in 1991. Comb sort improves on bubble sort in the same way that Shellsort improves on insertion sort.
+<br />
+
+### COMPLEXITY
+
+
+| Worst-Case | Average-Case | Best-Case | in-place | stable | Space Complexity |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| ![O(n^2)](https://latex.codecogs.com/svg.image?O(n^{2})) | ![O(n^2/p^2)](https://latex.codecogs.com/svg.image?O(n^{2}/2^{p})) | ![O(nlog_n)](https://latex.codecogs.com/svg.image?O(n\log&space;n)) | Yes | No | total : ![O(n)](https://latex.codecogs.com/svg.image?O(n)), auxiliary : ![O(1)](https://latex.codecogs.com/svg.image?O(1)) |

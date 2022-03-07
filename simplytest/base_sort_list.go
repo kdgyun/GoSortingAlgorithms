@@ -404,3 +404,17 @@ func CallParallelOddEvenMergeSort(origin []int, verify []int, callName string) O
 	}
 	return OutputForm{false, callName, -1, false, ""}
 }
+
+func CallCombSort(origin []int, verify []int, callName string) OutputForm {
+	if COMB_SORT {
+		test := make([]int, len(origin))
+		copy(test, origin)
+		fmt.Printf("runing %s...\n", callName)
+		start := time.Now()
+		sorts.CombSort(test)
+		end := time.Since(start)
+		eq, err := Equal(verify, test)
+		return OutputForm{true, callName, end.Nanoseconds(), eq, err}
+	}
+	return OutputForm{false, callName, -1, false, ""}
+}
