@@ -572,8 +572,10 @@ Timsort는 다양한 종류의 실제 데이터에서 잘 수행되도록 설계
 
 ## Odd-Even Merge Sort
 
-<br />   
-홀짝 병합 정렬은 사이즈는 <span> ![O(n(log_n)^2)](https://latex.codecogs.com/svg.image?O(n(\log&space;n)^2)) </span> , 깊이는 <span> ![O((log_n)^2)](https://latex.codecogs.com/svg.image?O((\log&space;n)^2)) </span> 를 갖는 네트워크 정렬을 위해 Ken Batcher 정렬 알고리즘 입니다.
+<br>
+
+홀짝 병합 정렬은 사이즈는 
+<span> ![O(n(log_n)^2)](https://latex.codecogs.com/svg.image?O(n(\log&space;n)^2)) </span>   , 깊이는   <span> ![O((log_n)^2)](https://latex.codecogs.com/svg.image?O((\log&space;n)^2)) </span>    를 갖는 네트워크 정렬을 위해 Ken Batcher 정렬 알고리즘 입니다.
 
 
 <br />
