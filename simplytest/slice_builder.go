@@ -14,6 +14,8 @@ import (
 	"math/big"
 	"math/rand"
 	"sort"
+
+	"github.com/logrusorgru/aurora/v3"
 )
 
 func RANDOM_INT(len int) ([]int, []int) {
@@ -21,9 +23,9 @@ func RANDOM_INT(len int) ([]int, []int) {
 	rand.Seed(seed.Int64())
 
 	var origin, verify []int
-	fmt.Printf("[array length : %d]\n", len)
+	fmt.Println(aurora.BrightCyan("[array/slice length : " + fmt.Sprint(len) + "]"))
 
-	fmt.Println("make arrays...")
+	fmt.Println("make slice...")
 	for i := 0; i < len; i++ {
 		v := rand.Int()
 
@@ -36,9 +38,9 @@ func RANDOM_INT(len int) ([]int, []int) {
 
 func DESCENDING_INT(len int) ([]int, []int) {
 	var origin, verify []int
-	fmt.Printf("[array length : %d]\n", len)
+	fmt.Println(aurora.BrightCyan("[array/slice length : " + fmt.Sprint(len) + "]"))
 
-	fmt.Println("make arrays...")
+	fmt.Println("make slice...")
 	for i := 0; i < len; i++ {
 
 		verify = append(verify, len-i)
@@ -50,9 +52,9 @@ func DESCENDING_INT(len int) ([]int, []int) {
 
 func ASCENDING_INT(len int) ([]int, []int) {
 	var origin, verify []int
-	fmt.Printf("[array length : %d]\n", len)
+	fmt.Println(aurora.BrightCyan("[array/slice length : " + fmt.Sprint(len) + "]"))
 
-	fmt.Println("make arrays...")
+	fmt.Println("make slice...")
 	for i := 0; i < len; i++ {
 
 		verify = append(verify, i)

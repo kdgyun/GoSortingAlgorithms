@@ -63,7 +63,11 @@ func callSortTest(origin, verify []int) {
 	for _, v := range q {
 		if v.active {
 			pf += fmt.Sprintf("|%s|\n", strings.Repeat("-", 97))
-			pf += fmt.Sprintf("| %35s | %20d ns | %15d ms | %10t |%s\n", v.name, v.Time, v.Time/int64(time.Millisecond), v.equl, v.err)
+			if v.equl {
+				pf += fmt.Sprintf("| %35s | %20d ns | %15d ms | %10t |%s\n", v.name, v.Time, v.Time/int64(time.Millisecond), aurora.BrightGreen(v.equl), v.err)
+			} else {
+				pf += fmt.Sprintf("| %35s | %20d ns | %15d ms | %10t |%s\n", v.name, v.Time, v.Time/int64(time.Millisecond), aurora.BrightRed(v.equl), v.err)
+			}
 		}
 	}
 
