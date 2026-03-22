@@ -10,7 +10,7 @@
 package sorts
 
 func QuickSortRP(a []int) {
-	quickSortLP(a, 0, len(a))
+	quickSortRP(a, 0, len(a))
 }
 
 func quickSortRP(a []int, lo, hi int) {
